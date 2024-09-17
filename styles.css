@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color:#F8EDED;
     font-family: "Josefin Sans", sans-serif;
@@ -63,27 +69,132 @@ header {
     color: #B43F3F;
 }
 
-.home-photo {
-    width: 100%;
-}
+
 
 .info {
-    text-align: center;
+    background-image: url("honeypizza.png");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 130, 37, 0.4);
+    background-blend-mode: lighten;
+    margin: 0;
+}
+
+#flex {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about {
-    background-color: #FF8225;
+    width: 65vw;
+    height: 300px;
     display: flex;
-    gap: 30px;
-    height: 50vh;
     align-items: center;
+    gap: 50px;
     color: #173B45;
-    padding: 20px;
+    margin: 50px 0px 20px 0px;
 }
 
-.about-img {
+.prioritiesFlex {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+    color: #173B45;
+}
+
+.moreFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 18vw;
+    color: #173B45
+}
+
+.moreFlex h3 {
+    margin-top: 20px;
+  
+}
+
+.moreFlex p {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+#ultimateFlex {
+    background-image: url("honeypizza.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
     border-radius: 10px;
-    margin-left: 20px;
+}
+
+#ultimateFlex h2 {
+    color: #173B45;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#background {
+    background-color: rgba(255, 130, 37);
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#slide {
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.imageSlide {
+    height: 25vh;
+}
+
+.logos {
+   display: inline-flex;
+   justify-content: space-around;
+   width: 100vw;
+   animation: 20s slide infinite linear;
+}
+
+@keyframes slide {
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
+}
+
+
+.about-img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.about p {
+    font-size: 1.1vw;
 }
 
 .special {
@@ -92,42 +203,52 @@ header {
 }
 
 .special-color {
-    color:#B43F3F;
+    color:#FF8225;
     font-weight: bold;
+    text-shadow: 2px 2px 5px #173B45;
 }
 
-.triangle-left {
-    width: 0;
-    height: 0;
-    border-top: 200px solid #B43F3F;
-    border-right: 200px solid transparent;
-}
-
-.triangle-right {
-    width: 0;
-    height: 0;
-    border-top: 200px solid #B43F3F;
-    border-left: 200px solid transparent;
-}
 
 .try {
     text-align: center;
     font-size: 3rem;
-    
+    color: white;
+}
+
+#para {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .menu-button-container {
     text-align: center;
 }
 
+.menu-button-container a {
+    text-decoration: none;
+    color: #173B45;
+}
+
 .menu-button {
-  text-decoration: none;
   background-color: #FF8225;
   border-radius: 20px;
   padding: 10px;
-  color:#173B45;
   font-size: 1.5rem;
+  box-shadow: 5px 5px 10px  #173B45;
 }
+
+.menu-button:hover {
+    background-color: #F05A01;
+}
+
+.menu-button:active {
+    background-color: #FF8225;
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+
 
 .map-photo {
     width: 100%;
@@ -177,28 +298,80 @@ li {
     height: 400px;
 }
 
-.pizza-photo {
-    width: 100%;
-}
-
 .photo-element {
-    position: relative;
-    
+    transform: translateZ(-5px) scale(1.5);
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    top: 400px;
 }
 
-.curve {
-   position: relative;
-   width: 100%;
-   top: -100px;
+.photo-element img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
+
+
+
+
+.gridboxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuItem p {
+    width: 80%;
+}
+
+.menuItem img {
+    width: 15vw;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.menu-item {
+    margin-top: 10px;
+}
+
+
+
 
 .menu-page {
-    background-color: #FF8225;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    scroll-behavior: smooth;
 }
+    
+      
+.bgColor {
+background-color: white;
+z-index: 1;
+
+
+      }
+
+      .backgroundElement {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        transform: translateZ(-10px) scale(2);
+      }
+
 
 .menu-title {
     font-size: 4rem;
     color:#B43F3F;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -206,14 +379,33 @@ h2 {
 }
 
 .menu-text {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color:#FF8225;
+    padding: 50px 40px;
+    z-index: 2;
+    top: 1000px;
 }
 
+
 .menu-item {
-    width: 60%;
     text-align: center;
+}
+
+@media (max-width: 1000px) {
+   .about {
+    width: 80vw;
+   }
+
+   .about p {
+    font-size: 1.4vw;
+   }
+
+   #logos {
+    width: 80vw;
+   }
 }
 
 @media (max-width: 820px) {
@@ -222,6 +414,26 @@ h2 {
         height: 100%;
         padding: 20px;
     }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        align-self: flex-start;
+    }
+
+    #fayChoice {
+        width: 16vw;
+     }
+
+     #wineDine {
+        width: 25vw;
+     }
+
+     #awardPizza {
+        width: 18vw;
+     }
 
     .hours {
         font-size: 11pt;
@@ -260,16 +472,6 @@ h2 {
 }
 
 @media (max-width: 728px) {
-     .triangle-left {
-        border-top: 100px solid #B43F3F;
-        border-right: 100px solid transparent; 
-     }
-
-     .triangle-right {
-        border-top: 100px solid #B43F3F;
-        border-left: 100px solid transparent; 
-     }
-
      .try {
         font-size: 2rem;
      }
@@ -277,6 +479,7 @@ h2 {
      .menu-button {
         font-size: 1rem;
      }
+
 }
 
 @media (max-width: 574px) {
