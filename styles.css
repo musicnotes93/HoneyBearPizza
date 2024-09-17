@@ -144,7 +144,7 @@ header {
     margin-top: 50px;
     margin-bottom: 50px;
     padding-top: 50px;
-    border-radius: 10px;
+    
 }
 
 #ultimateFlex h2 {
@@ -203,9 +203,9 @@ header {
 }
 
 .special-color {
-    color:#FF8225;
+     color:#FF8225;
     font-weight: bold;
-    text-shadow: 2px 2px 5px #173B45;
+    text-shadow: 2px 2px 15px black;
 }
 
 
