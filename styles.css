@@ -12,6 +12,7 @@ body {
 
 .menu {
     display: flex;
+    position: relative;
     justify-content: space-around;
     background-color: #B43F3F;
     padding-top: 10px;
@@ -30,7 +31,7 @@ body {
 }
 
 
-header {
+#headerFlex {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,9 +39,26 @@ header {
     padding: 0;
 }
 
+#cart {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+
+#checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#delivery {
+    display: none;
+}
+
+
+
 .logo-container {
-    width: 300px;
-    padding-right: 10px;
+    width: 20vw;
 }
 
 .logo-img {
@@ -49,7 +67,8 @@ header {
 
 .hours {
     font-size: 1.25rem;
-    min-width: 90px;
+    width: 20vw;
+
 }
 
 .larger {
@@ -60,8 +79,7 @@ header {
 .phone {
     font-size: 1.5rem;
     text-align: center;
-    padding-right: 40px;
-    min-width: 80px;
+    width: 20vw;
 }
 
 .bigger {
@@ -287,16 +305,13 @@ header {
 .contact-page {
     display: flex;
     justify-content: space-evenly;
-    width: 100vw;
 }
-
-
-
 .contact {
     background: linear-gradient(90deg, rgba(180,63,63,1) 33%, rgba(255,130,37,1) 100%);
     padding: 20px;
     height: 550px;
     width: 45vw;
+    border-radius: 10px;
 }
 
 .contact h2 {
@@ -357,20 +372,108 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    background-color:#B43F3F;
+    padding: 10px 0px;
+    border-radius: 10px;
 }
+.img-wrapper {
+    height: 12vw;
+    display: inline-block; 
+    overflow: hidden;      
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.scale-up {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+label[for="size"] {
+    font-size: 2rem;
+    color:#F8EDED;
+}
+
 
 .menuItem p {
     width: 80%;
 }
 
 .menuItem img {
-    width: 15vw;
-    margin-bottom: 10px;
-    border-radius: 6px;
+    height: 100%;
+   
 }
 
 .menu-item {
     margin-top: 10px;
+}
+
+.menuItem div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+#cartContainer {
+background-color:#F8EDED;
+height: 100vh;
+width: 30vw;
+position: absolute;
+right: -30vw;
+top: 0;
+z-index: 2;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+
+#cartNumber {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+}
+
+
+
+#cartContainer h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#cartContainer ul {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#cartContainer li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cartContainer button {
+    width: 9.5vw;
+    background-color: #B43F3F;
+    height: 8vh;
+}
+
+#cartButtons {
+    margin-top: 10px;
+    display: flex;
+    gap: 40px;
 }
 
 
@@ -386,6 +489,7 @@ li {
     
       
 .bgColor {
+position: relative;
 background-color: white;
 z-index: 1;
 
@@ -451,9 +555,7 @@ h2 {
         font-size: 1rem;
     }
 
-    .about-img {
-        align-self: flex-start;
-    }
+   
 
     #fayChoice {
         width: 16vw;
@@ -490,17 +592,28 @@ h2 {
     }
 
     .contact-page {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
     }
 
     .map {
-     padding-left: 0;
+        width: 90vw;
     }
-    .contact-title {
-        text-align: center;
-        padding-right: 40px;
-}
+
+    .contact {
+        width: 90vw;
+    }
+
+    .map-text {
+        margin-left: 5vw;
+    }
+
+    .contact-body p {
+        width: 90vw;
+    }
+
+  
 }
 
 @media (max-width: 728px) {
@@ -511,6 +624,11 @@ h2 {
      .menu-button {
         font-size: 1rem;
      }
+
+
+    .imageSlide {
+        height: 18vh;
+    }
 
 }
 
@@ -581,21 +699,15 @@ h2 {
     height: 300px;
    }
 
-   .map {
-    text-align: center;
-   }
 
-   .contact {
-    font-size: 14pt;
-    padding: 0;
-   }
 
-   .contact-title {
-    text-align: center;
-    padding-right: 40px;
-   }
 
    .menu-text {
     text-align: justify;
    }
+
+
+  .imageSlide {
+    height: 13vh;
+  }
 }

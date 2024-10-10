@@ -10,36 +10,69 @@
     <title>Honey Bear Pizza</title>
 </head>
 <body>
-    <header>  
-        <div class="hours"><span class="larger">Hours:</span> <br>
-            Monday: 6pm-7pm <br>
-            Tuesday: 6pm-7pm <br>
-            Wednesday: 6pm-7pm <br>
-            Thursday: 6pm-7pm <br>
-            Friday: Closed <br>
-            Saturday: Closed <br>
-            Sunday: Closed <br>
-        </div>
-        <div class="logo-container">
-          <a href="./index.html"><img class="logo-img" src="./newlogo.PNG"></a> 
-        </div>
-      <div class="phone"><span class="bigger">Call now:</span> <br> 
-                         (555)555-5555
-     </div>
-     </header>
+  <div id="cartContainer">
+    <div>
+     <h3>Shopping Cart</h3>
+     <ul id="cartList">
+      
+     </ul>
+    </div>
 
-      <div class="menu">
-      <a class="button" href="./about.html">About</a>
-      <a class="button" href="./menu.html">Menu</a>
-      <a class="button" href="./contact.html">Contact</a>
-      </div>
+    <div id="checkout">
+    <span id="delivery">Our delivery bears are on the way!</span>
+    <div id="cartButtons">
+    <button id="close">Close</button>
+    <button id="checkoutButton">Checkout</button>
+    </div>
+   </div>
+  </div>
+    
+    <header class="bgColor">
+        <div id="headerFlex"> 
+          <div class="hours"><span class="larger">Hours:</span> <br>
+              Monday: 6pm-7pm <br>
+              Tuesday: 6pm-7pm <br>
+              Wednesday: 6pm-7pm <br>
+              Thursday: 6pm-7pm <br>
+              Friday: Closed <br>
+              Saturday: Closed <br>
+              Sunday: Closed <br>
+          </div>
+          <div class="logo-container">
+            <a href="./index.html"><img class="logo-img" src="./newlogo.PNG"></a> 
+          </div>
+        <div class="phone">
+        <span class="bigger">Call now:</span> <br> 
+                           (555)555-5555<br>
+       </div>
+      </div> 
+      
+  
+
+      </header>
+   
+   
+      
+   
+        <div class="menu">
+        <a class="button" href="./about.html">About</a>
+        <a class="button" href="./menu.html">Menu</a>
+        <a class="button" href="./contact.html">Contact</a>
+        <div id="cart">
+     
+          <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg>
+      <div id="cartNumber"><span>0</span></div>
+    
+    </div>
+        </div>
     
       <div class="contact-body">
         <p class="map-text">Located in <span class="fayetteville"> Fayetteville, NC</span>, but our delivery bears can deliver anywhere in the US!</p>
        <div class="contact-page">
         <div class="map">
-        <iframe class="map-photo" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6526.034710730745!2d-78.92711028456688!3d35.13124043780663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1722188849582!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-       
+        <iframe class="map-photo" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6526.034710730745!2d-78.92711028456688!3d35.13124043780663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1722188849582!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
         </div>
 
         <div class="contact">
@@ -53,6 +86,7 @@
             <input id="phone" type="text" name="phone"><br>
             <label for="message">Your Message</label><br>
             <input id="message" type="textarea" name="message">
+            <button value="submit">Send</button>
         </form>
         </div>
         
@@ -61,7 +95,9 @@
        
 
 
-
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="./index.js"></script>
       </body>
+
+      
       </html>
