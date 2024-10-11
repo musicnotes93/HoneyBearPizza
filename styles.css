@@ -489,7 +489,7 @@ width: 30vw;
 position: fixed;
 right: -30vw;
 top: 0;
-z-index: 2;
+z-index: 4;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -757,6 +757,10 @@ width: 30px;
     background-size: cover;
 }
 
+.img-wrapper {
+    height: 20vh
+}
+
 
   
 }
@@ -801,7 +805,7 @@ width: 30px;
         position: fixed;
         right: 0;
         top: 0;
-        z-index: 3;
+        z-index: 4;
         }
 
         #cart {
