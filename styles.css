@@ -8,7 +8,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
-.phone {
+#phoneNumber {
     text-decoration: none;
     color: black;
 }
@@ -533,6 +533,7 @@ justify-content: space-between;
     width: 9.5vw;
     background-color: #B43F3F;
     height: 8vh;
+    color:#173B45;
 }
 
 #cartButtons {
