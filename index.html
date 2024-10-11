@@ -20,7 +20,25 @@
         </div>
     
         <div id="checkout">
-        <span id="delivery">Our delivery bears are on the way!</span>
+            <dialog id="delivery">
+                <form method="dialog">
+                <p>Our delivery bears are on the way!</p>
+                <div id="btn-container">
+                <button>Close</button>
+              </div>
+              </form>
+              </dialog>
+
+              <dialog id="emptyCart">
+                <form method="dialog">
+                  <p>Your cart is currently empty. Please add items in order to proceed with checkout.</p>
+                  <div class="btn-container">
+                <button>Close</button>
+              </div>
+                </form>
+              </dialog>
+         
+      
         <div id="cartButtons">
         <button id="close">Close</button>
         <button id="checkoutButton">Checkout</button>
@@ -77,6 +95,20 @@
                 </div>
         </div>
      </div>
+
+
+
+<footer>
+    <div id="footerCopyright">
+    <img id="footerLogoImage" src="newlogo.PNG">
+    <p>© 2024 Honey Bear Pizza</p>
+    </div>
+    <div id="footerLogos">
+        <img class="footerImages" src="wineanddine.png">
+        <img class="footerImages" src="faychoice.svg">
+        <img class="footerImages" src="awardpizza.png">
+    </div>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./index.js"></script>

@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Honey Bear Pizza</title>
+
+    
 </head>
 <body>
   <div id="cartContainer">
@@ -19,7 +22,24 @@
     </div>
 
     <div id="checkout">
-    <span id="delivery">Our delivery bears are on the way!</span>
+      <dialog id="delivery">
+        <form method="dialog">
+        <p>Our delivery bears are on the way!</p>
+        <div id="btn-container">
+        <button>Close</button>
+      </div>
+      </form>
+      </dialog>
+
+      <dialog id="emptyCart">
+        <form method="dialog">
+          <p>Your cart is currently empty. Please add items in order to proceed with checkout.</p>
+          <div class="btn-container">
+        <button>Close</button>
+      </div>
+        </form>
+      </dialog>
+ 
     <div id="cartButtons">
     <button id="close">Close</button>
     <button id="checkoutButton">Checkout</button>
@@ -54,10 +74,11 @@
    
       
    
-        <div class="menu">
+      <div class="menu">
         <a class="button" href="./about.html">About</a>
         <a class="button" href="./menu.html">Menu</a>
         <a class="button" href="./contact.html">Contact</a>
+
         <div id="cart">
      
           <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
@@ -66,14 +87,33 @@
       <div id="cartNumber"><span>0</span></div>
     
     </div>
-        </div>
+   </div>
     
       <div class="contact-body">
         <p class="map-text">Located in <span class="fayetteville"> Fayetteville, NC</span>, but our delivery bears can deliver anywhere in the US!</p>
        <div class="contact-page">
-        <div class="map">
-        <iframe class="map-photo" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6526.034710730745!2d-78.92711028456688!3d35.13124043780663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1722188849582!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+
+        <div id="map">
+
+
+          <script>
+            function initMap() {
+              map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 35.061317, lng: -78.868343 },
+                zoom: 12,
+              });
+            }
+          
+            function loadMapScript() {
+              const script = document.createElement('script');
+              script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDeyXcxiIuN2BoPZ0ntevSSHmX19fPB6u0&callback=initMap`;
+              document.body.appendChild(script);
+            }
+          
+            window.onload = loadMapScript; 
+          </script>
         </div>
+ 
 
         <div class="contact">
         <h2>Contact</h2>
@@ -85,15 +125,27 @@
             <label for="phone">Phone</label><br>
             <input id="phone" type="text" name="phone"><br>
             <label for="message">Your Message</label><br>
-            <input id="message" type="textarea" name="message">
+            <textarea id="message" type="textarea" name="message"></textarea>
             <button value="submit">Send</button>
         </form>
         </div>
         
     </div> 
  </div>
-       
+ 
 
+
+ <footer>
+  <div id="footerCopyright">
+  <img id="footerLogoImage" src="newlogo.PNG">
+  <p>© 2024 Honey Bear Pizza</p>
+  </div>
+  <div id="footerLogos">
+      <img class="footerImages" src="wineanddine.png">
+      <img class="footerImages" src="faychoice.svg">
+      <img class="footerImages" src="awardpizza.png">
+  </div>
+</footer>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="./index.js"></script>
