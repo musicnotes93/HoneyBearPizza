@@ -8,6 +8,10 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
+.phone {
+    text-decoration: none;
+}
+
 
 footer {
     background-color:#B43F3F;
