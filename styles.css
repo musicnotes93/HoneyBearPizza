@@ -154,7 +154,7 @@ footer p {
     background-color: rgba(244, 157, 80, 0.392);
     background-image: url("honeypizza.png");
     background-attachment: fixed;
-    /* height: 100vh; */
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: lighten;
