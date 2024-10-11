@@ -10,6 +10,7 @@ body {
 
 .phone {
     text-decoration: none;
+    color: black;
 }
 
 
@@ -153,7 +154,7 @@ footer p {
     background-color: rgba(244, 157, 80, 0.392);
     background-image: url("honeypizza.png");
     background-attachment: fixed;
-    height: 100vh;
+    /* height: 100vh; */
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: lighten;
@@ -562,7 +563,7 @@ z-index: 1;
       .backgroundElement {
         height: 100%;
         position: relative;
-        z-index: 1;
+        z-index: 3;
         transform: translateZ(-10px) scale(2);
       }
 
@@ -700,6 +701,61 @@ width: 30px;
     .contact-body p {
         width: 90vw;
     }
+
+    .menu-page {
+        height: auto;
+        overflow-x: auto;
+        perspective: none;
+        scroll-behavior: smooth;
+    }
+
+    .backgroundElement {
+           height: auto;
+            position: relative;
+            transform: none;
+
+    }
+
+    .photo-element {
+        transform: none;
+        width: auto;
+        position: relative;
+        height: 400px;
+        top: 0;
+    }
+
+
+
+ 
+
+    .menu-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:#FF8225;
+        padding-top: 50px;
+        z-index: 2;
+        top: 0;
+   
+    }
+
+
+.info {
+ 
+    background-attachment: scroll;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    margin: 0;
+}
+
+#ultimateFlex {
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 
   
 }

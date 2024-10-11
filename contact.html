@@ -94,26 +94,15 @@
         <p class="map-text">Located in <span class="fayetteville"> Fayetteville, NC</span>, but our delivery bears can deliver anywhere in the US!</p>
        <div class="contact-page">
 
-        <div id="map">
-
-
-          <script>
-            function initMap() {
-              map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 35.061317, lng: -78.868343 },
-                zoom: 12,
-              });
-            }
+        
+          <iframe id="map"
           
-            function loadMapScript() {
-              const script = document.createElement('script');
-              script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDeyXcxiIuN2BoPZ0ntevSSHmX19fPB6u0&callback=initMap`;
-              document.body.appendChild(script);
-            }
-          
-            window.onload = loadMapScript; 
-          </script>
-        </div>
+          frameborder="0" style="border:0"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI0qSQk8Tq4kRmzt2EnWeq6M&key=AIzaSyDeyXcxiIuN2BoPZ0ntevSSHmX19fPB6u0&zoom=13"
+          allowfullscreen>
+        </iframe>
+
  
 
         <div class="contact">
