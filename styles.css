@@ -529,11 +529,13 @@ justify-content: space-between;
     justify-content: space-between;
 }
 
+
+
 #cartContainer button {
     width: 9.5vw;
     background-color: #B43F3F;
     height: 8vh;
-    color:#173B45;
+    color: black;
 }
 
 #cartButtons {
@@ -579,6 +581,10 @@ h2 {
     color:#F8EDED;
 }
 
+#yoshi {
+    font-size: 16pt;
+}
+
 .menu-text {
     position: absolute;
     display: flex;
@@ -587,7 +593,7 @@ h2 {
     background-color:#FF8225;
     padding-top: 50px;
     z-index: 2;
-    top: 1000px;
+    top: 800px;
 }
 
 
@@ -596,7 +602,11 @@ h2 {
 }
 
 input[type="number"] {
-width: 30px;
+width: 40px;
+}
+
+#flexRight {
+    min-width: 70px;
 }
 
 #map {
@@ -792,12 +802,9 @@ width: 30px;
     #cartButtons {
         margin-top: 10px;
         display: flex;
-        gap: 40px;
-    }
-
-    #cartButtons {
         gap: 20px;
     }
+
 
     #cartContainer {
         height: 100%;
@@ -858,6 +865,10 @@ footer {
     flex-direction: column;
 }
 
+#footerLogos {
+   display: none;
+}
+
 #headerFlex {
     flex-direction: column;
     justify-content: center;
@@ -883,7 +894,12 @@ footer {
     .button {
         font-size: 8pt;
     }
+
+    .addToCart {
+        font-size: 12pt;
+    }
    
+
 
 
     .bigger {

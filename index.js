@@ -119,8 +119,8 @@ function createCartItem(name, size, quantity) {
     newListItem.classList.add("cart-item");
     newListItem.setAttribute("data-name", name);
     newListItem.setAttribute("data-size", size);
-    newListItem.innerHTML = `${name}, ${size} 
-       <div>
+    newListItem.innerHTML = `<div id="pizzaName">${name}, ${size}</div> 
+       <div id="flexRight">
         <input type="number" value="${quantity}" min="1" class="quantity-input" data-name="${name}" data-size="${size}" />
         <span>
             <svg class='trash' xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='currentColor' viewBox='0 0 16 16'>
