@@ -1,56 +1,4 @@
 $(document).ready(function() {
-    const form = document.getElementById('form');
-    const result = document.getElementById('result');
-    const wait = document.getElementById('wait');
-  
-    
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-      wait.innerHTML = "<span>Please wait...</span>";
-    
-        fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    $("#form").css("display", "none")
-                    wait.style.display = "none";
-                    result.innerHTML = '<span>Thank you for contacting Honey Bear Pizza! Honey Bear will be in touch soon!</span>';
-                    
-                    
-                } else {
-                    console.log(response);
-                    $("#form").css("display", "none")
-                    wait.style.display = "none";
-                    result.innerHTML = '<span>Thank you for contacting Honey Bear Pizza! Honey Bear will be in touch soon!</span>';
-                   
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                $("#form").css("display", "none")
-                wait.style.display = "none";
-                result.innerHTML = '<span>Something went wrong!</span>';
-                
-            })
-            .then(function() {
-                form.reset();
-                setTimeout(() => {
-                    result.style.display = "none"
-                    $("#form").css("display", "block");
-                }, 4000);
-            });
-    });
-
 
 $("#cartContainer").hide();
 
@@ -222,6 +170,61 @@ $("#checkoutButton").click(function() {
         document.getElementById("emptyCart").showModal();
     }
 })
+
+
+
+
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    const wait = document.getElementById('wait');
+  
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      wait.innerHTML = "<span>Please wait...</span>";
+    
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    $("#form").css("display", "none")
+                    wait.style.display = "none";
+                    result.innerHTML = '<span>Thank you for contacting Honey Bear Pizza! Honey Bear will be in touch soon!</span>';
+                    
+                    
+                } else {
+                    console.log(response);
+                    $("#form").css("display", "none")
+                    wait.style.display = "none";
+                    result.innerHTML = '<span>Thank you for contacting Honey Bear Pizza! Honey Bear will be in touch soon!</span>';
+                   
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                $("#form").css("display", "none")
+                wait.style.display = "none";
+                result.innerHTML = '<span>Something went wrong!</span>';
+                
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none"
+                    $("#form").css("display", "block");
+                }, 4000);
+            });
+    });
 
 });
 
