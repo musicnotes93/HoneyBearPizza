@@ -332,12 +332,12 @@ footer p {
 
 
 
-.map-photo {
-    width: 100%;
-    height: 100%;
+
+
+#map {
+    width: 45vw;
+    height: 575px;
 }
-
-
 
 
 
@@ -609,10 +609,7 @@ width: 40px;
     min-width: 70px;
 }
 
-#map {
-    width: 45vw;
-    height: 550px;
-}
+
 
 
 
@@ -911,10 +908,7 @@ footer {
         font-size: 1.5rem;
     }
 
-   .map-photo {
-    width: 75%;
-    height: 300px;
-   }
+
 
 
    .menu-text {
