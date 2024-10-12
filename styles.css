@@ -79,6 +79,8 @@ footer p {
 }
 
 
+
+
 #headerFlex {
     display: flex;
     justify-content: space-around;
@@ -107,6 +109,7 @@ footer p {
 #emptyCart {
     margin: auto;
 }
+
 
 
 .btn-container {
@@ -236,7 +239,7 @@ footer p {
 
 #background {
     background-color: rgba(255, 130, 37);
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 
 .flexContainer {
@@ -251,6 +254,8 @@ footer p {
     margin-top: 20px;
     white-space: nowrap;
     overflow: hidden;
+    padding-bottom: 40px;
+    
 }
 
 .imageSlide {
@@ -330,10 +335,6 @@ footer p {
     box-shadow: none;
     transform: translate(4px, 4px);
 }
-
-
-
-
 
 #map {
     width: 45vw;
@@ -610,6 +611,18 @@ width: 40px;
     min-width: 70px;
 }
 
+#result span {
+font-size: 18pt;
+}
+
+#wait {
+    margin-top: 20px;
+}
+
+
+
+
+
 
 
 
@@ -882,6 +895,10 @@ footer {
 
 .logo-container {
     width: 50vw;
+}
+
+#sendButton {
+    font-size: 14pt;
 }
 
 }

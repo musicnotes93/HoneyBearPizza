@@ -109,7 +109,8 @@
 
         <div class="contact">
         <h2>Contact</h2>
-        <form>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5de816cb-67e0-4078-9efd-bb5617f468eb">
             <label for="name">Name</label><br>
             <input id="name" type="text" name="name" required><br>
             <label for="email">Email</label><br>
@@ -118,8 +119,10 @@
             <input id="phone" type="text" name="phone"><br>
             <label for="message">Your Message</label><br>
             <textarea id="message" type="textarea" name="message"></textarea>
-            <button class="button" value="submit">Send</button>
-        </form>
+            <button id="sendButton" class="button" value="submit">Send</button>
+          </form>
+          <div id="wait"></div>
+          <div id="result"></div>
         </div>
         
     </div> 
