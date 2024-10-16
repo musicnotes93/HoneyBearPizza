@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+
+    function parallax() {
+        var ev = {
+            scrollTop: document.body.scrollTop || document.documentElement.scrollTop
+        };
+        ev.ratioScrolled = ev.scrollTop / (document.body.scrollHeight - document.documentElement.clientHeight);
+        render(ev);
+    }
+
+    $(window).scroll(function () {
+        parallax();
+    });
+
+    function render(ev) {
+        var t = ev.scrollTop;
+   
+        var y = Math.round(t * 1/3) - 350;
+        $('#ultimateFlex').css('background-position', '0 ' + y + 'px');
+    }
+
+
+
+
 $("#cartContainer").hide();
 
 
