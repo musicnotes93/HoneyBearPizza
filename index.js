@@ -10,7 +10,9 @@ $(document).ready(function() {
     }
 
     $(window).scroll(function () {
+        if($(window).width()>800) {
         parallax();
+        }
     });
 
     function render(ev) {
