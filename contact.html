@@ -94,17 +94,17 @@
    </div>
     
       <div class="contact-body">
-        <p class="map-text">Located in <span class="fayetteville"> Fayetteville, NC</span>, but our delivery bears can deliver anywhere in the US!</p>
-       <div class="contact-page">
 
-        
+     <div class="contact-page">
+      <div id="honeyLocation">
+        <p class="map-text">Located in <span class="fayetteville"> Fayetteville, NC</span>, but our delivery bears can deliver anywhere in the US!</p>
           <iframe 
           id="map"
           referrerpolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI0qSQk8Tq4kRmzt2EnWeq6M&key=AIzaSyDeyXcxiIuN2BoPZ0ntevSSHmX19fPB6u0&zoom=13"
           allowfullscreen>
         </iframe>
-
+      </div>
  
 
         <div class="contact">
@@ -119,6 +119,7 @@
             <input id="phone" type="text" name="phone"><br>
             <label for="message">Your Message</label><br>
             <textarea id="message" type="textarea" name="message"></textarea>
+            <div class="h-captcha" data-captcha="true"></div>
             <button id="sendButton" class="button" value="submit">Send</button>
           </form>
           <div id="wait"></div>
@@ -143,6 +144,7 @@
 </footer>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://web3forms.com/client/script.js" async defer></script>
       <script src="./index.js"></script>
       </body>
 

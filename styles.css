@@ -342,14 +342,14 @@ footer p {
 
 #map {
     width: 45vw;
-    height: 575px;
+    height: 593px;
 }
 
 
 
  .map-text {
     font-size: 1.75rem;
-    margin-left: 3.3vw;
+  
 }
 
 .contact-body {
@@ -370,6 +370,12 @@ footer p {
 .contact-page {
     display: flex;
     justify-content: space-evenly;
+}
+
+#honeyLocation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contact {
     background: linear-gradient(90deg, rgba(180,63,63,1) 33%, rgba(255,130,37,1) 100%);
@@ -720,9 +726,6 @@ font-size: 18pt;
         width: 90vw;
     }
 
-    .map-text {
-        margin-left: 5vw;
-    }
 
     .contact-body p {
         width: 90vw;

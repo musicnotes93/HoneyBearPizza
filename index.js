@@ -199,12 +199,22 @@ $("#checkoutButton").click(function() {
 
 
 
-    const form = document.getElementById('form');
-    const result = document.getElementById('result');
-    const wait = document.getElementById('wait');
+    
   
     
     form.addEventListener('submit', function(e) {
+
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+        const wait = document.getElementById('wait');
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+        
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field");
+                return; // Exit the function if hCaptcha is not filled
+            }
+
       e.preventDefault();
       const formData = new FormData(form);
       const object = Object.fromEntries(formData);
@@ -225,7 +235,7 @@ $("#checkoutButton").click(function() {
                     $("#form").css("display", "none")
                     wait.style.display = "none";
                     result.innerHTML = '<span>Thank you for contacting Honey Bear Pizza! Honey Bear will be in touch soon!</span>';
-                    
+                    form.reset();
                     
                 } else {
                     console.log(response);
@@ -252,5 +262,3 @@ $("#checkoutButton").click(function() {
     });
 
 });
-
- // $("#delivery").css("display", "block");
