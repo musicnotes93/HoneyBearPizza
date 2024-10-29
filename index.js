@@ -61,22 +61,6 @@ $("#close").click(function() {
 
 
 
-    const menuItems = document.querySelectorAll('.menuItem'); 
-
-    menuItems.forEach((item) => {
-        const menuImage = item.querySelector("img"); 
-
-        item.addEventListener("mouseover", function() {
-            console.log("Mouse over:", item);
-            menuImage.classList.add('scale-up'); 
-        });
-
-        item.addEventListener("mouseout", function() {
-            menuImage.classList.remove('scale-up');
-        });
-    });
-
-
 
 const userSize = document.getElementById("size1");
 const userSize2 = document.getElementById("size2");

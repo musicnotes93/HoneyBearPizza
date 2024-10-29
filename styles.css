@@ -5,6 +5,9 @@
 }
 
 
+#mobileHours {
+    display: none;
+}
 
 
 body {
@@ -158,7 +161,7 @@ footer p {
 
 .info {
     background-color: rgba(244, 157, 80, 0.392);
-    background-image: url("honeypizza.png");
+    background-image: url("assets/honeypizza.png");
     background-attachment: fixed;
     height: 100vh;
     background-repeat: no-repeat;
@@ -219,7 +222,7 @@ footer p {
 
 
 #ultimateFlex {
-    background: url("honeypizza.png") 0 -350px no-repeat;
+    background: url("assets/honeypizza.png") 0 -350px no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
@@ -446,7 +449,7 @@ li {
     margin-bottom: 20px;
 }
 
-.scale-up {
+.menu-image:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
@@ -589,9 +592,6 @@ z-index: 1;
     margin-bottom: 20px;
 }
 
-h2 {
-    color:#F8EDED;
-}
 
 #yoshi {
     font-size: 16pt;
@@ -771,7 +771,6 @@ font-size: 18pt;
 
 
 .info {
- 
     background-attachment: scroll;
     height: 70vh;
     background-repeat: no-repeat;
@@ -781,7 +780,7 @@ font-size: 18pt;
 }
 
 #ultimateFlex {
-    background: url("honeypizza.png") 0px no-repeat;
+    background: url("assets/honeypizza.png") 0px no-repeat;
     background-size:cover;
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
@@ -791,6 +790,28 @@ font-size: 18pt;
 
 .img-wrapper {
     height: 20vh
+}
+
+#mobileHours {
+    display: block;
+}
+
+#hoursFlex {
+    display: flex;
+    width: 100%;
+   gap: 40px;
+}
+
+#mobileHours h2 {
+  margin-bottom: 10px;
+  font-size: 1.75rem;
+}
+
+#hoursFlex ul {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 
